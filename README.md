@@ -36,3 +36,15 @@ $ cd tsort
 $ cargo build --release
 $ cargo run [FILE]
 ```
+#### whoami command ####
+```bash
+$ cd whoami
+$ cargo build --release
+$ cargo run
+```
+#### id command ####
+```bash
+$ cd id
+$ cargo build --release
+$ cargo run [OPTIONS] [USERNAME]
+```

@@ -12,3 +12,27 @@ Requirements
 ------------
 
 * Rust (`cargo`, `rustc`)
+
+Build Instructions
+------------------
+```bash
+$ git clone https://github.com/satyendra-ops/GNU-Coreutils-using-rust.git
+$ cd GNU-Coreutils-using-rust-master
+```
+### Cargo ###
+
+Building uutils using Cargo is easy because the process is the same as for
+every other Rust program:
+
+#### Cat Command ####
+```bash
+$ cd cat
+$ cargo build --release
+$ cargo run [OPTIONS] [FILES...]
+```
+#### tsort Command ####
+```bash
+$ cd tsort
+$ cargo build --release
+$ cargo run [FILE]
+```

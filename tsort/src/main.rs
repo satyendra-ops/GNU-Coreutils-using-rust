@@ -164,7 +164,7 @@ With no FILE, or when FILE is -, read standard input.
 
 
 	//println!("topological sort");
-	
+	/*Performing Topological Sort*/
 	while que.size()!=0
 	{
 		let h=que.peek().unwrap();

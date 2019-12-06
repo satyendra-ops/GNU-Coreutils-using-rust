@@ -6,8 +6,10 @@ use std::io::prelude::*;
 use std::vec::Vec;
 
 fn main() {
+    
+    /*Accepts the arguments from command line*/	
     let args: Vec<String> = env::args().collect();
-
+    /*Separating options and filename*/
     let mut vec=Vec::new();
     let mut nflag=0;
     let mut bflag=0;
@@ -55,7 +57,7 @@ Examples:
 		}
 	}
 
-
+        /*Cat command execution with options*/
 	let mut count=1;
     	let mut content = String::new();
 	if nflag==1 || bflag==1 ||tflag==1
@@ -138,7 +140,7 @@ Examples:
 	 	 }
 	return;
 	}
-
+	/*Plain display of text file*/
 	for i in vec.iter()
 	{
 		  let path = Path::new(&i);

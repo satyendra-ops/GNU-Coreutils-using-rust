@@ -6,10 +6,8 @@ use std::io::prelude::*;
 use std::vec::Vec;
 
 fn main() {
-    
-    /*Accepts the arguments from command line*/	
     let args: Vec<String> = env::args().collect();
-    /*Separating options and filename*/
+
     let mut vec=Vec::new();
     let mut nflag=0;
     let mut bflag=0;
@@ -57,9 +55,9 @@ Examples:
 		}
 	}
 
-        /*Cat command execution with options*/
+
 	let mut count=1;
-    	let mut content = String::new();
+    	
 	if nflag==1 || bflag==1 ||tflag==1
 	{
 
@@ -97,7 +95,8 @@ Examples:
 				
 				print!("{}\t\t\t",count);
 				count+=1;
-				file1.read_to_string(&mut content1); 
+				file1.read_to_string(&mut content1);
+
 		        	for s in content1.chars()
 				{
 					if s=='\t'||(s=='\n' && prev==1)
@@ -117,6 +116,7 @@ Examples:
 								prev=0;
 						}
 				}println!();
+
 			}
 			else if tflag==1
 			{
@@ -140,12 +140,12 @@ Examples:
 	 	 }
 	return;
 	}
-	/*Plain display of text file*/
+
 	for i in vec.iter()
 	{
 		  let path = Path::new(&i);
 		    let display = path.display();
-
+	           let mut content = String::new();
 		    let mut file = match File::open(&path) {
 		        Err(why) => panic!("Failed to open {} with error {}", display, why.description()),
 		        Ok(file) => file,

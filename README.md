@@ -1,1 +1,1 @@
-# GNU-Coreutils-using-rust
+# GNU Coreutils using rust

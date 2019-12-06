@@ -24,7 +24,7 @@ $ cd GNU-Coreutils-using-rust-master
 Building uutils using Cargo is easy because the process is the same as for
 every other Rust program:
 
-#### Cat Command ####
+#### cat Command ####
 ```bash
 $ cd cat
 $ cargo build --release
